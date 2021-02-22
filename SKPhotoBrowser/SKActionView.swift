@@ -66,6 +66,10 @@ class SKActionView: UIView {
     func updateDeleteButton(image: UIImage, size: CGSize? = nil) {
         configureDeleteButton(image: image, size: size)
     }
+	
+	func updateMenuButton(image: UIImage, size: CGSize? = nil) {
+		configureMenuButton(image: image, size: size)
+	}
     
     func animate(hidden: Bool) {
         let closeFrame: CGRect = hidden ? closeButton.hideFrame : closeButton.showFrame

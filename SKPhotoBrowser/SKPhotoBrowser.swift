@@ -32,7 +32,7 @@ open class SKPhotoBrowser: UIViewController {
     let animator: SKAnimator = .init()
     
     // child component
-    fileprivate var actionView: SKActionView!
+    open var actionView: SKActionView!
     fileprivate(set) var paginationView: SKPaginationView!
     var toolbar: SKToolbar!
 
@@ -276,6 +276,16 @@ open class SKPhotoBrowser: UIViewController {
 }
 
 // MARK: - Public Function For Customizing Buttons
+
+public extension SKPhotoBrowser {
+	func hideMenuButton(_ image: UIImage, size: CGSize? = nil) {
+		actionView.updateMenuButton(image: image, size: nil)
+	}
+	
+	func hideToolbar() {
+		self.toolbar.setControlsHidden(hidden: true)
+	}
+}
 
 public extension SKPhotoBrowser {
     func updateCloseButton(_ image: UIImage, size: CGSize? = nil) {
