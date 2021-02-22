@@ -278,12 +278,12 @@ open class SKPhotoBrowser: UIViewController {
 // MARK: - Public Function For Customizing Buttons
 
 public extension SKPhotoBrowser {
-	func hideMenuButton(_ image: UIImage, size: CGSize? = nil) {
+	func hideMenuButton(_ image: UIImage? = nil, size: CGSize? = nil) {
 		actionView.updateMenuButton(image: image, size: nil)
 	}
 	
 	func hideToolbar() {
-		self.toolbar.setControlsHidden(hidden: true)
+		self.toolbar.isHidden = true
 	}
 }
 

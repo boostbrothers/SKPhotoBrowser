@@ -67,7 +67,7 @@ class SKActionView: UIView {
         configureDeleteButton(image: image, size: size)
     }
 	
-	func updateMenuButton(image: UIImage, size: CGSize? = nil) {
+	func updateMenuButton(image: UIImage?, size: CGSize? = nil) {
 		configureMenuButton(image: image, size: size)
 	}
     
